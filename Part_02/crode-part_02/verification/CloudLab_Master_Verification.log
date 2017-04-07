@@ -1,0 +1,170 @@
+crode@node0:~$ pbsnodes -a
+node0-lan
+     state = free
+     np = 1
+     ntype = cluster
+     status = rectime=1491602618,varattr=,jobs=,state=free,netload=56120675,gres=node0:-lan,loadave=0.00,ncpus=56,physmem=263915372kb,availmem=265059748kb,totmem=267061096kb,idletime=2779,nusers=1,nsessions=1,sessions=4637,uname=Linux node0.gordon-crode.pdc-edu-lab-pg0.clemson.cloudlab.us 3.13.0-100-generic #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016 x86_64,opsys=linux
+
+node4-lan
+     state = free
+     np = 1
+     ntype = cluster
+     status = rectime=1491602621,varattr=,jobs=,state=free,netload=55637238,gres=node0:-lan,loadave=0.00,ncpus=56,physmem=263915372kb,availmem=265080836kb,totmem=267061096kb,idletime=2799,nusers=0,nsessions=? 15201,sessions=? 15201,uname=Linux node4.gordon-crode.pdc-edu-lab-pg0.clemson.cloudlab.us 3.13.0-100-generic #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016 x86_64,opsys=linux
+
+node5-lan
+     state = free
+     np = 1
+     ntype = cluster
+     status = rectime=1491602641,varattr=,jobs=,state=free,netload=55187804,gres=node0:-lan,loadave=0.00,ncpus=56,physmem=263915372kb,availmem=265084696kb,totmem=267061096kb,idletime=2800,nusers=0,nsessions=? 15201,sessions=? 15201,uname=Linux node5.gordon-crode.pdc-edu-lab-pg0.clemson.cloudlab.us 3.13.0-100-generic #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016 x86_64,opsys=linux
+
+node6-lan
+     state = free
+     np = 1
+     ntype = cluster
+     status = rectime=1491602603,varattr=,jobs=,state=free,netload=55112319,gres=node0:-lan,loadave=0.00,ncpus=56,physmem=263915372kb,availmem=265088188kb,totmem=267061096kb,idletime=2774,nusers=0,nsessions=? 15201,sessions=? 15201,uname=Linux node6.gordon-crode.pdc-edu-lab-pg0.clemson.cloudlab.us 3.13.0-100-generic #147-Ubuntu SMP Tue Oct 18 16:48:51 UTC 2016 x86_64,opsys=linux
+
+crode@node0:~$ mkdir /users/crode/testfiles
+
+crode@node0:~$ sudo cp -r /users/crode/testfiles /home
+crode@node0:~$ qsub -I -l select=4:ncpus=8:mpiprocs=8:mem=8gb,walltime=00:30:00
+qsub: waiting for job 0.node0-lan to start
+qsub: job 0.node0-lan ready
+
+crode@node0:~$ module avail
+
+----------------------------- /usr/share/modules/versions -----------------------------
+3.2.10
+
+--------------------------- /usr/share/modules/modulefiles ----------------------------
+ImageJ/1.50                        java/1.7.0
+Qt/4.8.5                           java/1.8.0
+Qt/5.2.1                           jupyterhub-python
+R/3.0.2                            lammps/10Jan15-dp
+R/3.2.2                            lammps/17Dec13-dp
+abaqus/6.10                        lammps/17Dec13-dp-k20
+abaqus/6.13                        lammps/29Aug14-sp-k20
+abaqus/6.14                        magma/1.4.1
+amber/14                           mathematica/10.0
+anaconda/2.5.0                     matlab/2012a
+anaconda/4.2.0                     matlab/2013a
+anaconda/4.3.0(default)            matlab/2014a
+anaconda3/2.5.0                    matlab/2014b
+anaconda3/4.2.0                    matlab/2015a
+anaconda3/4.3.0                    matlab/2016a
+ansys/15.0                         maven/3.2.1
+ansys/16.0                         module-git
+ansys/17.0                         module-info
+ansys/17.2                         modules
+ansys/18.0                         mpc/0.8.1
+ant/1.9.4                          mpfi/1.5.1
+barracuda/0.6.2                    mpfr/2.4.2
+basemount/0.14.2                   mpich/3.1.4
+boost/1.57.0                       mpich2/1.4
+bowtie/1.0.1                       namd/2.11b1
+bowtie2/2.1.0                      namd/2.9
+caffe/0.15-nvidia                  namd/2.9-k20
+cmake/2.8.12                       namd/20150610
+cmake/3.0.0-i130                   namd/20150610-intel
+cmake/3.6.1                        netcdf/4.3.3.1
+comsol/4.3b                        netcdf/4.4.0
+comsol/4.4                         netcdf-parallel/1.6.1
+comsol/5.0                         nuclides/vasp/5.4.1
+comsol/5.1                         null
+comsol/5.2                         nvbio/20150213
+connect-client/0.5.3               nwchem/6.3-ib
+cuDNN/7.0v4.0                      nwchem/6.3-mx
+cuDNN/8.0v5.1                      nwchem/6.5-ib
+cuda-toolkit/6.0.37                nwchem/6.6-ib
+cuda-toolkit/6.5.14                opencv/2.4.9
+cuda-toolkit/7.0.28                openmpi/1.10.3
+cuda-toolkit/7.5.18                openmpi/1.10.3-eth
+cuda-toolkit/8.0.44                openmpi/1.10.3-mlx
+cufflinks/2.1.1                    openmpi/1.10.3-qib
+deep-learning                      openmpi/1.6.4
+divvy/0.9                          openmpi/1.6.4-eth
+dmol/3.0                           openmpi/1.6.4-mlx4
+dot                                openmpi/1.6.4-mlx5
+earlang/18.2.1                     openmpi/1.6.4-myri
+emboss/6.6                         openmpi/1.6.4-myri-intel
+espeak/1.48.04                     openmpi/1.6.4-qib
+espresso/5.1                       openmpi/1.8.1
+espresso/5.4                       openmpi/1.8.1-eth
+examples                           openmpi/1.8.1-mlx
+fastqc/0.10.1                      openmpi/1.8.1-myri
+ffmpeg/2.4                         openmpi/1.8.1-qib
+fftw/3.3.3-dp-gcc                  openmpi/1.8.4
+fftw/3.3.3-dp-gcc-ompi             openmpi/1.8.4-eth
+fftw/3.3.3-sp-gcc                  openmpi/1.8.4-mlx
+fftw/3.3.3-sp-gcc-ompi             openmpi/1.8.4-myri
+fftw/3.3.4-g481                    openmpi/1.8.4-qib
+freefem++/3.37                     openquake/1.9.1
+fuse/2.9.7                         openquake/1.9.1dev
+gaussian/g03                       openquake/1.9.1dev-nocelery
+gaussian/g09                       openquake/13Apr16
+gcc/3.4                            openquake/6Feb16
+gcc/4.4                            opensees/2.4.6
+gcc/4.8.1                          opensees/2.5.0
+gcc/5.3.0                          openvswitch/2.4.0
+gcc/6.1.0                          paraview/4.1.0
+gdal/1.11.1                        paraview/5.0
+geos/3.5.0                         postgis/2.2.1
+git/2.6.3                          postgresql/9.4.0
+gmp/4.3.2                          python/2.7.6
+gnu-parallel                       python/3.4
+gnuplot/5.0.2                      rabbitmq/8Feb16
+gnuplot/5.0.5                      rclone/1.23
+go/1.6.2                           ruby/2.1.1
+go/1.7.1                           rust/1.13.0
+grass/7.0                          rust/1.14.0
+gromacs/4.5.4-sp                   rust/1.15.1
+gromacs/4.6.5-dp-ompi              rust/1.16.0
+gromacs/4.6.5-sp-k20-ompi          sage/6.1.1
+gromacs/5.0.1-dp-g481-o181         samtools/0.1.19
+gromacs/5.0.1-sp-k20-g481-o181     samtools/1.4
+gromacs/5.0.5-gpu                  scalapack/2.0.2
+gromacs/5.0.5-nogpu                sqlite/3.12.2
+gsl/1.15                           sratoolkit/2.3.3-4
+gsl/1.16                           sratoolkit/2.8.2-1
+gurobi/6.5.0                       sumo/0.29.0
+gurobi/7.0.1                       tau/2.25.2_gcc-6.10_openmpi-1.10.3
+hadoop/1.2.1                       thrust/1.8.1
+hdf5/1.10.0                        tophat/2.0.9
+hdf5/1.8.15                        trimmomatic/0.25
+hdp/6.0                            trimmomatic/0.30
+houdini/13.0.547                   trinity/20130814
+hwloc/1.10.1                       trinityrnaseq/r20131110
+intel/12.0                         use.own
+intel/12.1                         valgrind/3.11.0
+intel/13.0                         visit/2.9.2
+intel/15.0                         vtk/5.8.0
+intel/16.0                         zeromq/4.1.5
+crode@node0:~$ module load gcc/5.3.0 openmpi/1.10.3
+crode@node0:~$ module add anaconda3/4.2.0
+crode@node0:~$ mpirun -np 32  --mca mpi_cuda_support 0 python /home/testfiles/asg4-only-JobEvents.py
+
+-------------Part 1 Output-------------
+('Number of unique jobs: ', 12539)
+
+-------------Part 2 Output-------------
+JobID           RunTime         EventType
+(6167397602, '\t', 39767317606, '\t', 'KILL')
+(6250559420, '\t', 38524891849, '\t', 'FINISH')
+(6209468726, '\t', 38147586141, '\t', 'KILL')
+(6236570297, '\t', 36167132779, '\t', 'KILL')
+(6236570285, '\t', 36166294468, '\t', 'KILL')
+(6236570260, '\t', 36165375652, '\t', 'KILL')
+(6237558017, '\t', 36164547330, '\t', 'KILL')
+(6237558375, '\t', 36162170656, '\t', 'KILL')
+(6212763326, '\t', 35772519260, '\t', 'KILL')
+(6248920740, '\t', 35582542884, '\t', 'FINISH')
+(6249157365, '\t', 35564301620, '\t', 'KILL')
+(6249157324, '\t', 35564301615, '\t', 'KILL')
+(6249157182, '\t', 35564301557, '\t', 'FINISH')
+(6249153835, '\t', 35127277938, '\t', 'KILL')
+(5829839008, '\t', 34554261374, '\t', 'KILL')
+(6248392082, '\t', 31651162049, '\t', 'KILL')
+(6225092584, '\t', 31622724875, '\t', 'KILL')
+(6250264439, '\t', 28759712542, '\t', 'KILL')
+(6250257820, '\t', 28759712537, '\t', 'KILL')
+(6250245734, '\t', 28759712532, '\t', 'KILL')
+

@@ -1,0 +1,38 @@
+crode@node1:~$ df -h
+Filesystem                                     Size  Used Avail Use% Mounted on
+/dev/sda1                                       16G  1.9G   13G  13% /
+none                                           4.0K     0  4.0K   0% /sys/fs/cgroup
+udev                                           126G  4.0K  126G   1% /dev
+tmpfs                                           26G  1.2M   26G   1% /run
+none                                           5.0M     0  5.0M   0% /run/lock
+none                                           126G     0  126G   0% /run/shm
+none                                           100M     0  100M   0% /run/user
+ops.clemson.cloudlab.us:/share                  97G  1.2G   88G   2% /share
+ops.clemson.cloudlab.us:/proj/pdc-edu-lab-PG0  100G  2.1G   98G   3% /proj/pdc-edu-lab-PG0
+192.172.1.1:/home                               16G  2.0G   13G  14% /nfs/home
+
+crode@node2:~$ df -h
+Filesystem                                     Size  Used Avail Use% Mounted on
+/dev/sda1                                       16G  1.9G   13G  13% /
+none                                           4.0K     0  4.0K   0% /sys/fs/cgroup
+udev                                           126G  4.0K  126G   1% /dev
+tmpfs                                           26G  1.2M   26G   1% /run
+none                                           5.0M     0  5.0M   0% /run/lock
+none                                           126G     0  126G   0% /run/shm
+none                                           100M     0  100M   0% /run/user
+ops.clemson.cloudlab.us:/share                  97G  1.2G   88G   2% /share
+ops.clemson.cloudlab.us:/proj/pdc-edu-lab-PG0  100G  2.1G   98G   3% /proj/pdc-edu-lab-PG0
+192.172.1.1:/home                               16G  2.0G   13G  14% /nfs/home
+
+crode@node3:~$ df -h
+Filesystem                                     Size  Used Avail Use% Mounted on
+/dev/sda1                                       16G  1.9G   13G  13% /
+none                                           4.0K     0  4.0K   0% /sys/fs/cgroup
+udev                                           126G  4.0K  126G   1% /dev
+tmpfs                                           26G  1.2M   26G   1% /run
+none                                           5.0M     0  5.0M   0% /run/lock
+none                                           126G     0  126G   0% /run/shm
+none                                           100M     0  100M   0% /run/user
+ops.clemson.cloudlab.us:/proj/pdc-edu-lab-PG0  100G  2.1G   98G   3% /proj/pdc-edu-lab-PG0
+ops.clemson.cloudlab.us:/share                  97G  1.2G   88G   2% /share
+192.172.1.1:/home                               16G  2.0G   13G  14% /nfs/home
